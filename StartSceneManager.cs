@@ -24,37 +24,26 @@ public class StartSceneManager : MonoBehaviour
     // --- STARTボタン用 ---
     public void OnStartButtonClicked()
     {
-        // SEを鳴らす
         PlayClickSE();
-        // フェードアウトと遷移を開始
         StartCoroutine(StartGameSequence());
     }
 
     // --- チュートリアルボタン用 ---
     public void OnTutorialButtonClicked()
     {
-        // SEを鳴らす
         PlayClickSE();
-        // チュートリアルはすぐに遷移しても良いですが、
-        // 少しだけ余韻（0.2秒ほど）を持たせるとSEが綺麗に聞こえます
         StartCoroutine(GoToTutorialSequence());
     }
 
     public void OnHnadTutorialButtonClicked()
     {
-        // SEを鳴らす
         PlayClickSE();
-        // チュートリアルはすぐに遷移しても良いですが、
-        // 少しだけ余韻（0.2秒ほど）を持たせるとSEが綺麗に聞こえます
         StartCoroutine(GoToHandTutorialSequence());
     }
 
     public void OnDEBUGButtonClicked()
     {
-        // SEを鳴らす
         PlayClickSE();
-        // チュートリアルはすぐに遷移しても良いですが、
-        // 少しだけ余韻（0.2秒ほど）を持たせるとSEが綺麗に聞こえます
         StartCoroutine(GoToDEBUGSequence());
     }
 
@@ -63,7 +52,6 @@ public class StartSceneManager : MonoBehaviour
     {
         if (bgmSource != null && buttonClickSE != null)
         {
-            // PlayOneShotならBGMを止めずにSEを重ねて鳴らせる
             bgmSource.PlayOneShot(buttonClickSE);
         }
     }
@@ -81,23 +69,17 @@ public class StartSceneManager : MonoBehaviour
 
     IEnumerator GoToTutorialSequence()
     {
-        // SEが鳴る時間を少し待つ（一瞬でシーンが切り替わると音がブツ切れになるため）
         yield return new WaitForSeconds(0.2f);
-        // チュートリアル用のシーン名に合わせて書き換えてください
         SceneManager.LoadScene("TutorialScene");
     }
     IEnumerator GoToHandTutorialSequence()
     {
-        // SEが鳴る時間を少し待つ（一瞬でシーンが切り替わると音がブツ切れになるため）
         yield return new WaitForSeconds(0.2f);
-        // チュートリアル用のシーン名に合わせて書き換えてください
         SceneManager.LoadScene("HandTutorialScene");
     }
     IEnumerator GoToDEBUGSequence()
     {
-        // SEが鳴る時間を少し待つ（一瞬でシーンが切り替わると音がブツ切れになるため）
         yield return new WaitForSeconds(0.2f);
-        // チュートリアル用のシーン名に合わせて書き換えてください
         SceneManager.LoadScene("BalloonScene");
     }
 
