@@ -1,8 +1,9 @@
+<img width="1388" height="781" alt="スクリーンショット 2026-06-08 164453" src="https://github.com/user-attachments/assets/710729b3-2952-4a2e-8c74-8ed6a1fdb86d" />
 # VRミニゲームパック
 
 Meta Quest 3に対応した、コントローラや手を使って直感的に遊べるVRミニゲームです。
 
-[!['ゲームデモ映像']('https://github.com/user-attachments/assets/3f5352fd-6ffa-45ad-a4ea-f8dc8240571f')]('https://youtu.be/7mN8f1v2b6c?si=jTS7QhcXZehnmhTg')
+[!['ゲームデモ映像']('https://github.com/user-attachments/assets/710729b3-2952-4a2e-8c74-8ed6a1fdb86d')]('https://youtu.be/7mN8f1v2b6c?si=jTS7QhcXZehnmhTg')
 
 ## 開発環境
 - Unity 6000.4.1f1 (Unity 6)
